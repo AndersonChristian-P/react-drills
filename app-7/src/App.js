@@ -9,14 +9,20 @@ class App extends Component {
     input: ""
   }
 
+  //split the string by word
+  //combine words into an array
+  //push array into list
+
+
   handleInputChange = (event) => {
+    let str = event.target.value
     this.setState({
-      input: event.target.value
+      input: str.split(" ")
     })
   }
 
 
-  handleAddTask = () => {
+  handleNewTask = () => {
     this.setState({
       list: [...this.state.list, this.state.input],
       input: ""
@@ -36,7 +42,7 @@ class App extends Component {
         <div>
           <input placeholder="Enter New Task" onChange={this.handleInputChange} />
 
-          <button onClick={this.handleAddTask}>Add</button>
+          <button onClick={this.handleNewTask}>Add</button>
         </div>
 
         <br />

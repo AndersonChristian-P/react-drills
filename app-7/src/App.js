@@ -13,10 +13,9 @@ class App extends Component {
   //combine words into an array
   //push array into list
 
-  handleNewTask = () => {
+  handleAddTask = () => {
     this.setState({
-      list: [...this.state.list, this.state.input],
-      input: ""
+      list: [...this.state.list, this.state.input]
     })
   }
 
